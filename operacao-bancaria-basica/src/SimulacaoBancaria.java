@@ -3,15 +3,17 @@ import java.util.Scanner;
 public class SimulacaoBancaria {
 
     public static void main(String[] args) {
+      
+           /* System.out.println("1. Depositar");
+            System.out.println("2. Sacar");
+            System.out.println("3. Consultar Saldo");
+            System.out.println("4. Encerrar ");*/
+            
         Scanner scanner = new Scanner(System.in); 
         double saldo = 0; 
         boolean fim = true;
         // Loop infinito para manter o programa em execução até que o usuário decida sair
         while (fim) { 
-            System.out.println("1. Depositar");
-            System.out.println("2. Sacar");
-            System.out.println("3. Consultar Saldo");
-            System.out.println("4. Encerrar ");
             
             int opcao = scanner.nextInt(); 
         // TODO: Implemente as condições necessárias para avalia a opção escolhida:
@@ -28,7 +30,7 @@ public class SimulacaoBancaria {
                 //System.out.println(" Digite o valor que deseja sacar ");
                 double valorSacado = scanner.nextDouble();
                 if(valorSacado > saldo){
-                  System.out.println("Saldo Atual Insulficiente ");
+                  System.out.println("Saldo insuficiente. ");
                 } else {
                   double saldoNovo = saldo - valorSacado;
                   System.out.println("Saldo Atual : " + saldoNovo);
@@ -54,10 +56,10 @@ public class SimulacaoBancaria {
              default:
                 System.out.println("Programa encerrado.");
                 break;
-             // Exibe mensagem de opção inválida se o usuário escolher uma opção inválida:    
+        // Exibe mensagem de opção inválida se o usuário escolher uma opção inválida:    
+                  //System.out.println("Opção inválida. Tente novamente.");
                     //System.out.println("Opção inválida. Tente novamente."); 
             }
-            
         }
     }
 }
